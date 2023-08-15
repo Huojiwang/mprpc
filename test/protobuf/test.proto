@@ -1,0 +1,48 @@
+syntax = "proto3"; // 指定使用 proto3 语法版本
+
+package fixbug; // 声明代码所在的包（类似于命名空间）
+
+//定义下面的方法
+option cc_generic_services = true;
+
+message ResultCode{
+    int32 errcode = 1;
+    bytes errmsg = 2;
+}
+// 登录请求消息类型
+message LoginRequest {
+    bytes name = 1; // 字段 "name"，字段标签为 1
+    bytes pwd = 2;  // 字段 "pwd"，字段标签为 2
+    // map<int32,string> test;
+}
+
+// 登录响应消息类型
+message LoginResponse {
+    ResultCode result = 1 ;
+    bool success = 2;    // 字段 "success"，字段标签为 3
+}
+
+message GetFriendListRequest{
+    uint32 userid = 1;
+}
+message User{
+    bytes name = 1;
+    uint32 age = 2;
+    enum Sex{
+        MAN = 0;
+        WOMAN = 1;
+    }
+    Sex sex = 3;
+}
+
+message GetFriendListResponese{
+    ResultCode result = 1;
+    repeated User friend_list = 2;
+}
+
+//在protobuf里怎么定义描述rpc方法的类型
+service UserServiceRpc{
+    rpc Login(LoginRequest) returns (LoginResponse);
+    rpc GetFriendList(GetFriendListRequest) returns (GetFriendListResponese);
+}
+

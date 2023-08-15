@@ -1,0 +1,8 @@
+9:48:53==>first log message!9:48:53==>/home/xd/Public/program/mprpc/example/callee/friendservice.cc:main:499:54:57==>[errot]first log message!
+9:54:57==>[errot]/home/xd/Public/program/mprpc/example/callee/friendservice.cc:main:49
+9:54:57==>[errot]service_name : `ø3æU
+9:54:57==>[info]method_name : pj}×ÿ
+9:57:22==>[error]first log message!
+9:57:22==>[error]/home/xd/Public/program/mprpc/example/callee/friendservice.cc:main:49
+9:57:22==>[error]service_name : FriendServiceRpc
+9:57:22==>[info]method_name : GetFriendList

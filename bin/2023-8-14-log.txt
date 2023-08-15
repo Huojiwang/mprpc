@@ -1,0 +1,4 @@
+16:37:53==>[error]first log message!
+16:37:53==>[error]/home/xd/Public/program/mprpc/example/callee/friendservice.cc:main:49
+16:37:53==>[error]service_name : FriendServiceRpc
+16:37:53==>[info]method_name : GetFriendList
